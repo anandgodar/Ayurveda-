@@ -6,7 +6,12 @@ userApp.config([ '$routeProvider', function($routeProvider) {
 	// route for the home page
 	.when('/home', {
 		templateUrl : 'home',
-		controller : 'mainController'
+		controller : 'aboutController'
+	})
+	
+	.when('/diseaseSymptoms', {
+		templateUrl : 'diseaseSymptom',
+		controller : 'dshpController'
 	})
 
 	// route for the about page
@@ -69,7 +74,7 @@ userApp.factory('userService', function($http) {
 
 });
 
-userApp.controller('userController', function($scope, userService) {
+userApp.controller('userController',['$scope','userService', function($scope, userService) {
 	$scope.user = {};
 	$scope.findAllUsers = function() {
 		userService.getAllUsers().success(function(data) {
@@ -99,4 +104,28 @@ userApp.controller('userController', function($scope, userService) {
 
 	$scope.findAllUsers();
 
+}]);
+
+
+
+userApp.factory('dshpService', function($http) {
+	var self = this;
+	return {
+		getAllDiseaseSymHerbPats : function() {
+			return $http.get('diseaseSymptom/getDeseaseAndSymptoms');
+		}
+	}
+
 });
+
+userApp.controller('dshpController', ['$scope', 'dshpService',function($scope, dshpService) {
+	$scope.shivaji = "Annad";
+	$scope.findAllDshp = function() {
+		dshpService.getAllDiseaseSymHerbPats().success(function(record) {
+			$scope.dshpRecords = record;
+		});
+	}
+
+	$scope.findAllDshp();
+
+}]);

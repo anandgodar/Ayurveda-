@@ -16,6 +16,32 @@ public class DiseaseSymptom {
 	private int id;
 	private String disease;
 	private String symptom;
+	private int patientId;
+	private String herbal;
+	public String getHerbal() {
+		return herbal;
+	}
+
+	public void setHerbal(String herbal) {
+		this.herbal = herbal;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getPatientId() {
+		return patientId;
+	}
+
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
+	}
+
 	private String userId;
 
 	public String getUserId() {

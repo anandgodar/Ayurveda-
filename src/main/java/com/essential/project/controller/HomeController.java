@@ -68,6 +68,12 @@ public class HomeController {
 	
 	}
 	
+	@RequestMapping(value="/diseaseSymptom",method=RequestMethod.GET)
+	public String diseaseSymptom(){
+		return "pages/home";
+	
+	}
+	
 	
 	
 }

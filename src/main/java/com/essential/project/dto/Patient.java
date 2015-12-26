@@ -19,7 +19,7 @@ public class Patient {
 	private String email;
 	private String gender;
 	private Date dateOfBirth;
-	private String weight;
+	private int weight;
 	private String bloodPressure;
 	private String country;
 	private String state;
