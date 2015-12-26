@@ -18,7 +18,12 @@ public class DiseaseSymHerbPatientServiceImpl implements DiseaseSymHerbPatientSe
 	public List<DiseaseSymptom> getAllDiseaseAndSymptoms() {
 		return dshpRepository.findAll();
 	}
-	
+
+	/*@Override
+	public List<DiseaseSymptom> getFrontReport() {
+		return dshpRepository.getFrontReport();
+	}
+	*/
 	
 	
 	

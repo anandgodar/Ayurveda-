@@ -18,16 +18,17 @@
 <script src="<spring:url value="/resources/js/userApp.js"/>"></script>
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-<link href="<spring:url value="/resources/css/styles.css"/>" rel="stylesheet">
+<link href="<spring:url value="/resources/css/styles.css"/>"
+	rel="stylesheet">
 </head>
 <body>
 	<!-- begin template -->
 	<div class="navbar navbar-custom navbar-fixed-top">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Ayurveda ++ </a> <a class="navbar-toggle"
-				data-toggle="collapse" data-target=".navbar-collapse"> <span
-				class="icon-bar"></span> <span class="icon-bar"></span> <span
-				class="icon-bar"></span>
+			<a class="navbar-brand" href="#">Ayurveda ++ </a> <a
+				class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse"> <span class="icon-bar"></span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span>
 			</a>
 		</div>
 		<div class="navbar-collapse collapse">
@@ -36,9 +37,8 @@
 				<li><a href="#login"><i class="fa fa-unlock"></i> Sign In</a></li>
 				<li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
 				<li><a href="#diseaseSymptoms"><i class="fa fa-comment"></i>
-							Disease</a></li>
-				<li><a href="#users"><i class="fa fa-user"></i>
-							User</a></li>
+						Disease</a></li>
+				<li><a href="#users"><i class="fa fa-user"></i> User</a></li>
 			</ul>
 			<form class="navbar-form">
 				<div class="form-group" style="display: inline;">
@@ -56,10 +56,20 @@
 								<li><a href="#">Category 5</a></li>
 							</ul>
 						</div>
-						<input type="text" class="form-control"
-							placeholder="What are searching for?" > <span
-							class="input-group-addon"><span
-							class="glyphicon glyphicon-search"></span> </span>
+						
+							<div class="form-group">
+								<label class="sr-only" for="exampleInputEmail3">Email
+									address</label> <input type="email" class="form-control"
+									id="exampleInputEmail3" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="exampleInputPassword3">Password</label>
+								<input type="password" class="form-control"
+									id="exampleInputPassword3" placeholder="Password">
+							</div>
+							
+							<button type="submit" class="btn btn-default">Sign in</button>
+						
 					</div>
 				</div>
 			</form>
@@ -67,30 +77,30 @@
 	</div>
 
 	<div id="map-canvas">
-	<div class="col-md-8">
-		
-		<div class="account-wall">
-			<img class="profile-img"
-				src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-				alt="">
-			<form class="form-signin" >
-				<input type="text" class="form-control" placeholder="Email" required
-					autofocus> <input type="password" class="form-control"
-					placeholder="Password" required>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">
-					Sign in</button>
-				<label class="checkbox pull-left"> <input type="checkbox"
-					value="remember-me"> Remember me
-				</label> <a href="#" class="pull-right need-help">Need help? </a><span
-					class="clearfix"></span>
-			</form>
+		<div class="col-md-8">
+
+			<div class="account-wall">
+				<img class="profile-img"
+					src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+					alt="">
+				<form class="form-signin">
+					<input type="text" class="form-control" placeholder="Email"
+						required autofocus> <input type="password"
+						class="form-control" placeholder="Password" required>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">
+						Sign in</button>
+					<label class="checkbox pull-left"> <input type="checkbox"
+						value="remember-me"> Remember me
+					</label> <a href="#" class="pull-right need-help">Need help? </a><span
+						class="clearfix"></span>
+				</form>
+			</div>
+			<a href="#" class="text-center new-account">Create an account </a>
 		</div>
-		<a href="#" class="text-center new-account">Create an account </a>
-	</div>
 	</div>
 	<div class="container-fluid" id="main" ng-view></div>
 	<!-- end template -->
 
-	
+
 </body>
 </html>

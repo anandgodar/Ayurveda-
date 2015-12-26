@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "diseasesymptom")
@@ -18,6 +19,27 @@ public class DiseaseSymptom {
 	private String symptom;
 	private int patientId;
 	private String herbal;
+	
+	public String getTotal() {
+		return total;
+	}
+
+	public void setTotal(String total) {
+		this.total = total;
+	}
+
+	public String getSubTotal() {
+		return subTotal;
+	}
+
+	public void setSubTotal(String subTotal) {
+		this.subTotal = subTotal;
+	}
+
+	@Transient
+	private String total;
+	@Transient
+	private String subTotal;
 	public String getHerbal() {
 		return herbal;
 	}
