@@ -1,25 +1,21 @@
 package com.essential.project.dto;
 
 import java.util.Date;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "disease")
-public class Disease {
+@Table(name = "diseasesymptom")
+public class DiseaseSymptom {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String fileId;
-	private Date importDate;
-	
+	private String disease;
+	private String symptom;
 	private String userId;
 
 	public String getUserId() {
@@ -29,6 +25,9 @@ public class Disease {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+
+	private String fileId;
+	private Date importDate;
 
 	public String getFileId() {
 		return fileId;
@@ -46,34 +45,19 @@ public class Disease {
 		this.importDate = importDate;
 	}
 
-	public Disease() {
-
+	public String getDisease() {
+		return disease;
 	}
 
-	public int getId() {
-		return id;
+	public void setDisease(String disease) {
+		this.disease = disease;
 	}
 
-	public String getDiseaseName() {
-		return diseaseName;
+	public String getSymptom() {
+		return symptom;
 	}
 
-	public void setDiseaseName(String diseaseName) {
-		this.diseaseName = diseaseName;
+	public void setSymptom(String symptom) {
+		this.symptom = symptom;
 	}
-
-	public String getImportId() {
-		return importId;
-	}
-
-	public void setImportId(String importId) {
-		this.importId = importId;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	private String diseaseName;
-	private String importId;
 }

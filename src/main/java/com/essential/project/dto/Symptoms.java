@@ -1,6 +1,6 @@
 package com.essential.project.dto;
 
-
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,16 +9,43 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="symptom")
+@Table(name = "symptom")
 public class Symptoms {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
-	public Symptoms(){
-		
+	private String fileId;
+	private Date importDate;
+	private String userId;
+
+	public String getUserId() {
+		return userId;
 	}
-	
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getFileId() {
+		return fileId;
+	}
+
+	public void setFileId(String fileId) {
+		this.fileId = fileId;
+	}
+
+	public Date getImportDate() {
+		return importDate;
+	}
+
+	public void setImportDate(Date importDate) {
+		this.importDate = importDate;
+	}
+
+	public Symptoms() {
+
+	}
+
 	public int getId() {
 		return id;
 	}
