@@ -1,7 +1,5 @@
 package com.essential.project.serviceImpl;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +21,9 @@ public class DiseaseSymHerbPatientServiceImpl implements DiseaseSymHerbPatientSe
 
 	@Override
 	public List<DiseaseSymptom> getFrontReport() {
-		List<Object[]>  sy = dshpRepository.getFrontReport();
+		return dshpRepository.getFrontReport();
+		
+		/*List<Object[]>  sy = dshpRepository.getFrontReport();
 		List<DiseaseSymptom> result = new ArrayList<DiseaseSymptom>(sy.size());
 		for(Object[] x: sy){
 			DiseaseSymptom symp = new DiseaseSymptom();
@@ -35,10 +35,8 @@ public class DiseaseSymHerbPatientServiceImpl implements DiseaseSymHerbPatientSe
 			symp.setSubTotal(x[5].toString());
 			result.add(symp);
 		}
-		return result;
+		return result;*/
 	}
-
-
 	
 	
 	

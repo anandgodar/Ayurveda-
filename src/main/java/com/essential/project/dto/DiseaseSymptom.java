@@ -20,6 +20,14 @@ public class DiseaseSymptom {
 	public DiseaseSymptom() {
 		super();
 	}
+	public DiseaseSymptom(String disease, String symptom, String herbal, Date importDate, Long total, Long subTotal) {
+		this.disease = disease;
+		this.symptom = symptom;
+		this.herbal = herbal;
+		this.importDate = importDate;
+		this.total = total.toString();
+		this.subTotal = subTotal.toString();
+	}
 
 	private String disease;
 	private String symptom;

@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+  pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <!-- saved from url=(0057)https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/ -->
 <html lang="en" class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,18 +13,18 @@
   <meta name="author" content="">
 
   <!-- Google Font: Open Sans -->
-  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/css">
-  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/css(1)">
+  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/css"/>">
+  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/css(1)"/>">
 
   <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/font-awesome.min.css">
+  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/font-awesome.min.css"/>">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/bootstrap.min.css">
+  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/bootstrap.min.css"/>">
 
 
     <!-- App CSS -->
-  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/mvpready-admin.css">
+  <link rel="stylesheet" href="<spring:url value="/resources/css/admin/mvpready-admin.css"/>">
   <!-- <link rel="stylesheet" href="./css/custom.css"> -->
 
 
@@ -48,8 +52,7 @@
           <i class="fa fa-cog"></i>
         </button>
 
-        <a href="<spring:url value="/resources/js/Analytics Dashboard · MVP Ready.html" class="navbar-brand navbar-brand-img">
-          <img src="<spring:url value="/resources/js/logo.png" alt="MVP Ready">
+        <a href="">
         </a>
       </div> <!-- /.navbar-header -->
 
@@ -123,28 +126,28 @@
               <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 225px;"><div class="notification-list" style="overflow: hidden; width: auto; height: 225px;">
 
                 <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/page-notifications.html" class="notification">
-                  <div class="notification-icon"><img src="<spring:url value="/resources/js/avatar-3-md.jpg" alt=""></div>
+                  <div class="notification-icon"><img src="" alt=""></div>
                   <div class="notification-title">New Message</div>
                   <div class="notification-description">Praesent dictum nisl non est sagittis luctus.</div>
                   <div class="notification-time">20 minutes ago</div>
                 </a> <!-- / .notification -->
 
                 <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/page-notifications.html" class="notification">
-                  <div class="notification-icon"><img src="<spring:url value="/resources/js/avatar-3-md.jpg" alt=""></div>
+                  <div class="notification-icon"><img src="" alt=""></div>
                   <div class="notification-title">New Message</div>
                   <div class="notification-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div>
                   <div class="notification-time">20 minutes ago</div>
                 </a> <!-- / .notification -->
 
                 <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/page-notifications.html" class="notification">
-                  <div class="notification-icon"><img src="<spring:url value="/resources/js/avatar-4-md.jpg" alt=""></div>
+                  <div class="notification-icon"><img src="" alt=""></div>
                   <div class="notification-title">New Message</div>
                   <div class="notification-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div>
                   <div class="notification-time">20 minutes ago</div>
                 </a> <!-- / .notification -->
 
                 <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/page-notifications.html" class="notification">
-                  <div class="notification-icon"><img src="<spring:url value="/resources/js/avatar-5-md.jpg" alt=""></div>
+                  <div class="notification-icon"><img src="" alt=""></div>
                   <div class="notification-title">New Message</div>
                   <div class="notification-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div>
                   <div class="notification-time">20 minutes ago</div>
@@ -199,7 +202,7 @@
 
           <li class="dropdown navbar-profile">
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
-              <img src="<spring:url value="/resources/js/avatar-4-sm.jpg" class="navbar-profile-avatar" alt="">
+              <img src="" class="navbar-profile-avatar" alt="">
               <span class="visible-xs-inline">@peterlandt &nbsp;</span>
               <i class="fa fa-caret-down"></i>
             </a>
@@ -268,13 +271,13 @@
         <ul class="mainnav-menu">
 
           <li class="dropdown active">
-          	<a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/index.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+            <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/index.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
             
-          	Dashboards
-          	<i class="mainnav-caret"></i>
-          	</a>
+            Dashboards
+            <i class="mainnav-caret"></i>
+            </a>
 
-          	<ul class="dropdown-menu" role="menu">
+            <ul class="dropdown-menu" role="menu">
               <li>
                 <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/index.html">
                 <i class="fa fa-dashboard dropdown-icon "></i> 
@@ -295,7 +298,7 @@
                 Reports Dashboard
                 </a>
               </li>
-          	</ul>
+            </ul>
           </li>
 
 
@@ -304,7 +307,7 @@
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
               
             Components
-            <i class="mainnav-caret"></i>					
+            <i class="mainnav-caret"></i>         
             </a>
 
             <ul class="dropdown-menu" role="menu">
@@ -342,7 +345,7 @@
                 <i class="fa fa-bar-chart-o dropdown-icon "></i> 
                 Charts
                 </a>
-              </li>		  
+              </li>     
             </ul>
           </li>
 
@@ -415,7 +418,7 @@
                 <i class="fa fa-bell dropdown-icon "></i> 
                 Notifications
                 </a>
-              </li>			
+              </li>     
 
               <li>
                 <a href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/extras-icons.html">
@@ -739,30 +742,30 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Core JS -->
-<script src="<spring:url value="/resources/js/admin/jquery.js"></script>
-<script src="<spring:url value="/resources/js/admin/bootstrap.min.js"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/bootstrap.min.js"/>"></script>
 
-<script src="<spring:url value="/resources/js/admin/jquery.slimscroll.min.js"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.slimscroll.min.js"/>"></script>
 
 
 <!-- Plugin JS -->
-<script src="<spring:url value="/resources/js/admin/excanvas.min.js"></script>
-<script src="<spring:url value="/resources/js/admin/jquery.flot.js"></script>
-<script src="<spring:url value="/resources/js/admin/jquery.flot.pie.js"></script>
-<script src="<spring:url value="/resources/js/admin/jquery.flot.resize.js"></script>
-<script src="<spring:url value="/resources/js/admin/jquery.flot.time.js"></script>
-<script src="<spring:url value="/resources/js/admin/jquery.flot.tooltip.js"></script>
+<script src="<spring:url value="/resources/js/admin/excanvas.min.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.flot.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.flot.pie.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.flot.resize.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.flot.time.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/jquery.flot.tooltip.js"/>"></script>
 <!-- App JS -->
-<script src="<spring:url value="/resources/js/admin/mvpready-core.js"></script>
-<script src="<spring:url value="/resources/js/admin/mvpready-helpers.js"></script>
-<script src="<spring:url value="/resources/js/admin/mvpready-admin.js"></script>
+<script src="<spring:url value="/resources/js/admin/mvpready-core.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/mvpready-helpers.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/mvpready-admin.js"/>"></script>
 
 
 <!-- Demo JS -->
-<script src="<spring:url value="/resources/js/admin/line.js"></script>
-<script src="<spring:url value="/resources/js/admin/pie.js"></script>
-<script src="<spring:url value="/resources/js/admin/auto.js"></script>
+<script src="<spring:url value="/resources/js/admin/line.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/pie.js"/>"></script>
+<script src="<spring:url value="/resources/js/admin/auto.js"/>"></script>
 
 
 
-<a id="back-to-top" href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/#top" style="display: none;"><i class="fa fa-chevron-up"></i></a><div class="flotTip" style="display: none; position: absolute; z-index: 1040; padding: 0.4em 0.6em; border-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); white-space: nowrap; background: rgb(255, 255, 255);"></div></body></html>
+<a id="back-to-top" href="https://jumpstartthemes.com/demo/v/2.1.0/templates/admin/#top" style="display: none;"/>"><i class="fa fa-chevron-up"></i></a><div class="flotTip" style="display: none; position: absolute; z-index: 1040; padding: 0.4em 0.6em; border-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); white-space: nowrap; background: rgb(255, 255, 255);"></div></body></html>

@@ -2,7 +2,7 @@
 	<div class="col-xs-8" id="left" ng-controller="dshpController">
 		<br /> <input type="text" class="form-control"
 			placeholder="What are searching for?" ng-model="searchDisease">
-			<h1>Showing {{(dshpRecords|filter:searchDisease).length}} out of {{dshpRecords.length}} Records</h1>
+			<h1>Total Records : {{dshpRecords[0].total}}, Showing {{(dshpRecords|filter:searchDisease).length}} out of {{dshpRecords.length}} Distinct Records</h1>
 		<div ng-repeat="dshp in dshpRecords | filter:searchDisease | orderBy:dshp.subTotal ">
 			<!-- item list -->
 			<div class="panel panel-default">
