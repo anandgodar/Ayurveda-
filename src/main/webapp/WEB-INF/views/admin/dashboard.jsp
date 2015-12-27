@@ -583,6 +583,13 @@
 		src="<spring:url value="/resources/js/admin/jquery.flot.time.js"/>"></script>
 	<script
 		src="<spring:url value="/resources/js/admin/jquery.flot.tooltip.js"/>"></script>
+		
+		<script
+		src="<spring:url value="/resources/js/admin/dataTables.min.js"/>"></script>
+		<script
+		src="<spring:url value="/resources/js/admin/dataTables.bootstrap.js"/>"></script>
+		<script
+		src="<spring:url value="/resources/js/admin/datatables-helper.js"/>"></script>
 	<!-- App JS -->
 	<script
 		src="<spring:url value="/resources/js/admin/mvpready-core.js"/>"></script>

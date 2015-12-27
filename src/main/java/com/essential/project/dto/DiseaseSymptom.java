@@ -35,6 +35,11 @@ public class DiseaseSymptom {
 		this.herbalCount = herbalCount;
 		this.patientCount = patientCount;
 	}
+	
+	public DiseaseSymptom( String disease,Long diseaseCount) {
+		this.diseaseCount = diseaseCount;
+		this.disease = disease;
+	}
 
 	public long getDiseaseCount() {
 		return diseaseCount;

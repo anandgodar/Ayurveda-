@@ -30,6 +30,13 @@ public class DiseaseSymptomController {
 	
 	}
 	
+	@RequestMapping(value = "/getOverallDiseases")
+	@ResponseBody
+	public List<DiseaseSymptom> getOverallDiseases() {
+		return diseaseSymHerbPatientService.getOverallDiseases();
+	
+	}
+	
 	
 
 }

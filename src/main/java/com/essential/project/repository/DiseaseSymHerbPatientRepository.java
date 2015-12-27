@@ -21,8 +21,11 @@ public interface DiseaseSymHerbPatientRepository extends JpaRepository<DiseaseSy
 	/*@Query(nativeQuery=true,value = "select count(distinct disease) diseaseCount,count(distinct symptom) symptomCount,count(distinct herbal) herbalCount,count(distinct patientid) patientCount from diseaseSymptom")
 	public List<Object[]> getOverallStats();*/
 	
-	@Query("select count(distinct disease) as diseaseCount,count(distinct symptom) as symptomCount,count(distinct herbal) as herbalCount,count(distinct patientid) as  patientCount from DiseaseSymptom")
-	public List<Object[]> getOverallStats();
+	@Query("select new com.essential.project.dto.DiseaseSymptom(count(distinct disease),count(distinct symptom) ,count(distinct herbal) ,count(distinct patientid)) from DiseaseSymptom")
+	public List<DiseaseSymptom> getOverallStats();
+	
+	@Query(" select new com.essential.project.dto.DiseaseSymptom(disease , count(*))  from DiseaseSymptom group by disease")
+	public List<DiseaseSymptom> getOverallDiseases();
 	
 
 }
