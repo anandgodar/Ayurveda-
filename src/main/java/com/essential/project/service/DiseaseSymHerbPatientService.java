@@ -8,7 +8,7 @@ import com.essential.project.dto.DiseaseSymptom;
 public interface DiseaseSymHerbPatientService {
 	
 	public List<DiseaseSymptom> getAllDiseaseAndSymptoms();
-	//public List<DiseaseSymptom> getFrontReport();
+	public List<DiseaseSymptom> getFrontReport();
 	
 	
 

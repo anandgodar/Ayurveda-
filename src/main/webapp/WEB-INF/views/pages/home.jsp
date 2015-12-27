@@ -3,18 +3,15 @@
 		<br /> <input type="text" class="form-control"
 			placeholder="What are searching for?" ng-model="searchDisease">
 			<h1>Showing {{(dshpRecords|filter:searchDisease).length}} out of {{dshpRecords.length}} Records</h1>
-		<div ng-repeat="dshp in dshpRecords | filter:searchDisease | orderBy:dshp.disease ">
-			<h3>{{dshp.disease}}</h3>
-
+		<div ng-repeat="dshp in dshpRecords | filter:searchDisease | orderBy:dshp.subTotal ">
 			<!-- item list -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<a href="">Symptom-{{dshp.symptom}}</a>
+					<a href="">Disease {{dshp.disease}} - Symptom-{{dshp.symptom}} ,year {{dshp.importDate}} , Total Treated : {{dshp.subTotal}} ,Using herbal :{{dshp.herbal}} </a>
 				</div>
 			</div>
 			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Integer posuere erat a ante.</p>
+				<p>%: {{dshp.subTotal}}/{{dshp.total}}</p>
 				<footer>
 					Herbal Used: <cite title="Source Title">{{dshp.herbal}}</cite>
 				</footer>

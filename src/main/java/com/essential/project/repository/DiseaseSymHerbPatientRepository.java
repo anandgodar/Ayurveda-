@@ -10,7 +10,9 @@ import com.essential.project.dto.DiseaseSymptom;
 
 @Repository
 public interface DiseaseSymHerbPatientRepository extends JpaRepository<DiseaseSymptom, Integer>{
+	
+	
+	@Query(nativeQuery = true,value = "select distinct disease,symptom,herbal,importDate,(select count(*)from DISEASESYMPTOM) total,count(*) subTotal from DISEASESYMPTOM group by disease,symptom,herbal,importDate")
+	public List<Object[]> getFrontReport();
 
-	@Query("select e from (select distinct disease , symptom,herbal,importdate,(select count(*)from DISEASESYMPTOM) total,count(*) subTotal from DISEASESYMPTOM p group by disease,symptom,herbal,importdate) e")
-	public List<DiseaseSymptom> getFrontReport();
 }

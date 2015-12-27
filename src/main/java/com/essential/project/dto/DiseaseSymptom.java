@@ -6,8 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
 
 @Entity
 @Table(name = "diseasesymptom")
@@ -15,10 +17,21 @@ public class DiseaseSymptom {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	public DiseaseSymptom() {
+		super();
+	}
+
 	private String disease;
 	private String symptom;
 	private int patientId;
 	private String herbal;
+	@Transient
+	private String total;
+	@Transient
+	private String subTotal;
+	private Long userId;
+
+	private Long fileId;
 	
 	public String getTotal() {
 		return total;
@@ -32,14 +45,13 @@ public class DiseaseSymptom {
 		return subTotal;
 	}
 
+	
+
 	public void setSubTotal(String subTotal) {
 		this.subTotal = subTotal;
 	}
 
-	@Transient
-	private String total;
-	@Transient
-	private String subTotal;
+	
 	public String getHerbal() {
 		return herbal;
 	}
@@ -64,27 +76,27 @@ public class DiseaseSymptom {
 		this.patientId = patientId;
 	}
 
-	private String userId;
-
-	public String getUserId() {
+	
+	
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
-	private String fileId;
-	private Date importDate;
-
-	public String getFileId() {
+	public Long getFileId() {
 		return fileId;
 	}
 
-	public void setFileId(String fileId) {
+	public void setFileId(Long fileId) {
 		this.fileId = fileId;
 	}
 
+	private Date importDate;
+
+	
 	public Date getImportDate() {
 		return importDate;
 	}
@@ -108,4 +120,6 @@ public class DiseaseSymptom {
 	public void setSymptom(String symptom) {
 		this.symptom = symptom;
 	}
+	
+	
 }

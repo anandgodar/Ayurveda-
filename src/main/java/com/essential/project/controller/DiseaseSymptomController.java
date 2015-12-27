@@ -20,8 +20,8 @@ public class DiseaseSymptomController {
 
 	@RequestMapping(value = "/getDeseaseAndSymptoms")
 	@ResponseBody
-	public List<DiseaseSymptom> getAllUsers() {
-		return diseaseSymHerbPatientService.getAllDiseaseAndSymptoms();
+	public List<DiseaseSymptom> getDeseaseAndSymptoms() {
+		return diseaseSymHerbPatientService.getFrontReport();
 	
 	}
 	

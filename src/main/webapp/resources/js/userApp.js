@@ -6,7 +6,7 @@ userApp.config([ '$routeProvider', function($routeProvider) {
 	// route for the home page
 	.when('/home', {
 		templateUrl : 'home',
-		controller : 'aboutController'
+		controller : 'dshpController'
 	})
 	
 	.when('/diseaseSymptoms', {
@@ -119,7 +119,7 @@ userApp.factory('dshpService', function($http) {
 });
 
 userApp.controller('dshpController', ['$scope', 'dshpService',function($scope, dshpService) {
-	$scope.shivaji = "Annad";
+	
 	$scope.findAllDshp = function() {
 		dshpService.getAllDiseaseSymHerbPats().success(function(record) {
 			$scope.dshpRecords = record;
