@@ -37,6 +37,24 @@ public class DiseaseSymHerbPatientServiceImpl implements DiseaseSymHerbPatientSe
 		}
 		return result;*/
 	}
+
+	@Override
+	public DiseaseSymptom getOverallStats() {
+		List<Object[]> ok = dshpRepository.getOverallStats();
+		Object[] res = ok.get(0);
+		int diseaseCount =  Integer.valueOf(res[0].toString());
+		int symptomCount =  Integer.valueOf(res[1].toString());
+		int herbalCount =  Integer.valueOf(res[2].toString());
+		int patientCount =  Integer.valueOf(res[3].toString());
+		DiseaseSymptom symp = new DiseaseSymptom();
+		symp.setDiseaseCount(diseaseCount);
+		symp.setPatientCount(patientCount);
+	
+		symp.setHerbalCount(herbalCount);
+		symp.setSymptomCount(symptomCount);
+		return symp;
+		
+	}
 	
 	
 	

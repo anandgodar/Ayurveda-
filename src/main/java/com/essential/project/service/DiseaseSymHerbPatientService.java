@@ -9,6 +9,7 @@ public interface DiseaseSymHerbPatientService {
 	
 	public List<DiseaseSymptom> getAllDiseaseAndSymptoms();
 	public List<DiseaseSymptom> getFrontReport();
+	public DiseaseSymptom getOverallStats();
 	
 	
 

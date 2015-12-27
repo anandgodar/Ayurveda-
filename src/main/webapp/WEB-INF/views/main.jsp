@@ -40,7 +40,7 @@
 						Disease</a></li>
 				<li><a href="#users"><i class="fa fa-user"></i> User</a></li>
 			</ul>
-			<form class="navbar-form">
+			<form class="navbar-form" action="admin/verify" method="post">
 				<div class="form-group" style="display: inline;">
 					<div class="input-group">
 						<div class="input-group-btn">
@@ -58,17 +58,16 @@
 						</div>
 						
 							<div class="form-group">
-								<label class="sr-only" for="exampleInputEmail3">Email
-									address</label> <input type="email" class="form-control"
-									id="exampleInputEmail3" placeholder="Email">
+								<label class="sr-only" for="exampleInputEmail3">Username</label> <input type="text" class="form-control"
+									id="" placeholder="Username" name="username">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="exampleInputPassword3">Password</label>
 								<input type="password" class="form-control"
-									id="exampleInputPassword3" placeholder="Password">
+									id="exampleInputPassword3" placeholder="Password" name="password">
 							</div>
 							
-							<button type="submit" class="btn btn-default">Sign in</button>
+							<input type="submit" class="btn btn-default" name="submit" value="Sign in">
 						
 					</div>
 				</div>

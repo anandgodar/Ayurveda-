@@ -28,6 +28,38 @@ public class DiseaseSymptom {
 		this.total = total.toString();
 		this.subTotal = subTotal.toString();
 	}
+	
+	public DiseaseSymptom( Long diseaseCount,Long symptomCount, Long herbalCount, Long patientCount) {
+		this.diseaseCount = diseaseCount;
+		this.symptomCount = symptomCount;
+		this.herbalCount = herbalCount;
+		this.patientCount = patientCount;
+	}
+
+	public long getDiseaseCount() {
+		return diseaseCount;
+	}
+	public void setDiseaseCount(long diseaseCount) {
+		this.diseaseCount = diseaseCount;
+	}
+	public long getSymptomCount() {
+		return symptomCount;
+	}
+	public void setSymptomCount(long symptomCount) {
+		this.symptomCount = symptomCount;
+	}
+	public long getHerbalCount() {
+		return herbalCount;
+	}
+	public void setHerbalCount(long herbalCount) {
+		this.herbalCount = herbalCount;
+	}
+	public long getPatientCount() {
+		return patientCount;
+	}
+	public void setPatientCount(long patientCount) {
+		this.patientCount = patientCount;
+	}
 
 	private String disease;
 	private String symptom;
@@ -37,6 +69,16 @@ public class DiseaseSymptom {
 	private String total;
 	@Transient
 	private String subTotal;
+	
+	@Transient
+	private long diseaseCount;
+	@Transient
+	private long symptomCount;
+	@Transient
+	private long herbalCount;
+	@Transient
+	private long patientCount;
+	
 	private Long userId;
 
 	private Long fileId;

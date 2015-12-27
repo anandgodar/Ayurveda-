@@ -49,8 +49,7 @@ public class userServiceImpl implements UserService {
 
 	@Override
 	public Login findByUserNameAndPassword(String username, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepository.findByusernameAndPassword(username,password);
 	}
 	
 	

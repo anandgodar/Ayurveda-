@@ -18,7 +18,7 @@ import com.essential.project.service.UserService;
 
 
 @Controller
-@RequestMapping(value="/admin/")
+@RequestMapping(value="admin")
 @SessionAttributes("userInfo")
 public class LoginController {
 
@@ -26,7 +26,7 @@ public class LoginController {
 	private UserService userService;
 	
 
-	@RequestMapping(value = "dashboard", method = RequestMethod.GET)
+	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboard(Model model, HttpSession session) {
 		/*if (session.getAttribute("userInfo") == null) {
 			return "redirect:/login";
@@ -35,7 +35,7 @@ public class LoginController {
 		return "admin/dashboard";
 	}
 
-	@RequestMapping(value = "login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(HttpSession session) {
 
 		if (session.getAttribute("userInfo") != null) {
@@ -45,17 +45,18 @@ public class LoginController {
 		return "Login";
 	}
 
-	@RequestMapping(value = "verify", method = RequestMethod.POST)
+	@RequestMapping(value = "/verify", method = RequestMethod.POST)
 	public String verify(@ModelAttribute("login") Login user, Model model, HttpSession session) {
 
 		Login loginUser = userService.findByUserNameAndPassword(user.getUsername(), user.getPassword());
+		System.out.println(loginUser);
 		if (loginUser != null) {
-		
-			session.setAttribute("roleId", loginUser.getRole());
+			
+			session.setAttribute("role", loginUser.getRole());
 			session.setAttribute("userInfo", loginUser);
 			model.addAttribute("userObject", loginUser);
 
-			return "redirect:/";
+			return "redirect:dashboard";
 		}
 		model.addAttribute("errorMessage", "Invalid Username or Password");
 		model.addAttribute("page", "Login");
@@ -76,11 +77,19 @@ public class LoginController {
 	 * 
 	 * @return
 	 */
-	@RequestMapping("/dologout")
+	@RequestMapping(value="/dologout")
 	public String doLogout(HttpSession session, SessionStatus status) {
 		status.setComplete();
 		session.removeAttribute("userInfo");
 		return "redirect:/login";
 	}
+	
+	@RequestMapping(value="/innerdashboard", method=RequestMethod.GET)
+	public String innerDashboard() {
+		
+		return "admin/backhome";
+	}
+	
+	
 
 }

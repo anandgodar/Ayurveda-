@@ -2,8 +2,6 @@ package com.essential.project.controller;
 
 import java.util.List;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +20,13 @@ public class DiseaseSymptomController {
 	@ResponseBody
 	public List<DiseaseSymptom> getDeseaseAndSymptoms() {
 		return diseaseSymHerbPatientService.getFrontReport();
+	
+	}
+	
+	@RequestMapping(value = "/getOverallStats")
+	@ResponseBody
+	public DiseaseSymptom getOverallStats() {
+		return diseaseSymHerbPatientService.getOverallStats();
 	
 	}
 	
