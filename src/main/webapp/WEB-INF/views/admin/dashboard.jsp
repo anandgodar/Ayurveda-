@@ -551,7 +551,7 @@
 
 		<div class="content">
 
-			<div class="container" ng-view ng-controller="dashboardController">{{name}}</div>
+			<div class="container" ng-view ></div>
 			<!-- /.container -->
 
 		</div>

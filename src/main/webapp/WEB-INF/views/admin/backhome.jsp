@@ -1,4 +1,4 @@
- <div class="row">
+ <div class="row" ng-controller="dashboardController">
 
           <div class="col-md-4 col-sm-5">
 
@@ -20,19 +20,19 @@
                   <tbody>
                     <tr>
                       <td class="kv-key"><i class="fa fa-dollar kv-icon kv-icon-primary"></i> Total Patient</td>
-                      <td class="kv-value">$5,367 </td>
+                      <td class="kv-value"><a href="#subreport/patient">{{statRecords.patientCount}}</a> </td>
                     </tr>
                     <tr>
                       <td class="kv-key"><i class="fa fa-gift kv-icon kv-icon-secondary"></i> Total Disease</td>
-                      <td class="kv-value">473 </td>
+                      <td class="kv-value"><a href="#subreport/disease">{{statRecords.diseaseCount}}</a> </td>
                     </tr>
                     <tr>
                       <td class="kv-key"><i class="fa fa-exchange kv-icon kv-icon-tertiary"></i>Total Symptoms</td>
-                      <td class="kv-value">78</td>
+                      <td class="kv-value"><a href="#subreport/symptom">{{statRecords.symptomCount}}</a></td>
                     </tr>
                     <tr>
                       <td class="kv-key"><i class="fa fa-envelope-o kv-icon kv-icon-default"></i> Herbals</td>
-                      <td class="kv-value">39 </td>
+                      <td class="kv-value"><a href="#subreport/herbal">{{statRecords.herbalCount}}</a> </td>
                     </tr>
                   </tbody>
                 </table>

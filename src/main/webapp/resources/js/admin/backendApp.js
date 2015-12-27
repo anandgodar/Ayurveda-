@@ -8,6 +8,11 @@ backendApp.config([ '$routeProvider', function($routeProvider) {
 		controller : 'dashboardController'
 	})
 	
+	.when('/subreport/:reportType', {
+		templateUrl : 'subreport',
+		controller : 'dashboardController'
+	})
+	
 	
 	$routeProvider.otherwise({
 		redirectTo : '/innerdashboard'
@@ -15,9 +20,25 @@ backendApp.config([ '$routeProvider', function($routeProvider) {
 
 } ]);
 
-backendApp.controller('dashboardController', ['$scope',function($scope) {
+backendApp.factory('reportService', function($http) {
+	var self = this;
+	return {
+		getOverallStats : function() {
+			return $http.get('/project/diseaseSymptom/getOverallStats');
+		}
+	}
+
+});
+
+backendApp.controller('dashboardController', ['$scope','reportService',function($scope,reportService) {
 	
-	$scope.name= "Anandg";
+	$scope.getOverallStats = function() {
+		reportService.getOverallStats().success(function(data) {
+			$scope.statRecords = data;
+		});
+	}
+	
+	$scope.getOverallStats();
 
 }]);
 

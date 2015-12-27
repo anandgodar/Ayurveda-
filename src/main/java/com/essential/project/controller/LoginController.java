@@ -90,6 +90,14 @@ public class LoginController {
 		return "admin/backhome";
 	}
 	
+	@RequestMapping(value="/subreport", method=RequestMethod.GET)
+	public String subreport() {
+		
+		return "admin/subreport";
+	}
+	
+	
+	
 	
 
 }
