@@ -13,6 +13,8 @@ public interface DiseaseSymHerbPatientService {
 	public List<DiseaseSymptom> getOverallDiseases();
 	public List<Object[]> getOverallPatients();
 	public List<Object[]> getPatientByDisease(String diseaseName);
+	public List<DiseaseSymptom> getOverallSymptoms();
+	public List<DiseaseSymptom> getOverallHerbals();
 	
 
 }
