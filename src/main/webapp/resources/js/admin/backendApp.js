@@ -10,7 +10,12 @@ backendApp.config([ '$routeProvider', function($routeProvider) {
 
 	.when('/subreport/:reportType', {
 		templateUrl : 'subreport',
-		controller : 'dashboardController'
+		controller : 'reportController'
+	})
+
+	.when('/getPatientByDisease/:diseaseName', {
+		templateUrl : 'getPatientByDisease',
+		controller : 'reportController'
 	})
 
 	$routeProvider.otherwise({
@@ -36,23 +41,24 @@ backendApp.factory('reportService', function($http) {
 		},
 		getOverallSymptoms : function() {
 			return $http.get('/project/diseaseSymptom/getOverallSymptoms');
+		},
+		getPatientByDisease : function(disease) {
+			return $http.get('/project/diseaseSymptom/getPatientByDisease/'+disease);
 		}
 	}
 
 });
 
-backendApp.controller('dashboardController', [ '$scope', 'reportService',
-		function($scope, reportService) {
-
-			$scope.getOverallStats = function() {
-				reportService.getOverallStats().success(function(data) {
-					$scope.statRecords = data;
-				});
-			}
-
-			$scope.getOverallStats();
-
-		} ]);
+/*
+ * backendApp.controller('dashboardController', [ '$scope', 'reportService',
+ * function($scope, reportService) {
+ * 
+ * $scope.getOverallStats = function() {
+ * reportService.getOverallStats().success(function(data) { $scope.statRecords =
+ * data; }); }
+ * 
+ * $scope.getOverallStats(); } ]);
+ */
 
 backendApp.controller('dashboardController', [ '$scope', 'reportService',
 		function($scope, reportService) {
@@ -70,6 +76,13 @@ backendApp.controller('dashboardController', [ '$scope', 'reportService',
 backendApp.controller('reportController', [ '$scope', '$routeParams',
 		'reportService', function($scope, $routeParams, reportService) {
 
+			$scope.getPatientByDisease = function(diseaseName) {
+				alert(diseaseName);
+				reportService.getPatientByDisease(diseaseName).success(function(data) {
+					$scope.patientRecords = data;
+				});
+			}
+			
 			$scope.getGenericReports = function() {
 				if ($routeParams.reportType == 'patient') {
 					reportService.getOverallPatients().success(function(data) {
@@ -77,7 +90,7 @@ backendApp.controller('reportController', [ '$scope', '$routeParams',
 					});
 				}
 				if ($routeParams.reportType == 'disease') {
-					
+
 					reportService.getOverallDiseases().success(function(data) {
 						$scope.diseaseRecords = data;
 					});
@@ -95,6 +108,8 @@ backendApp.controller('reportController', [ '$scope', '$routeParams',
 					});
 				}
 			}
-
+			/*if($routeParams.diseaseName!=null){
+				$scope.getPatientByDisease();
+			}*/
 			$scope.getGenericReports();
 		} ])

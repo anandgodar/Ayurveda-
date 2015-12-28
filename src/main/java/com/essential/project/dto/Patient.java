@@ -18,8 +18,8 @@ public class Patient {
 	private String lastName;
 	private String email;
 	private String gender;
-	private Date dateOfBirth;
-	private int weight;
+	private String dateOfBirth;
+	private String weight;
 	private String bloodPressure;
 	private String country;
 	private String state;
@@ -105,19 +105,20 @@ public class Patient {
 		this.gender = gender;
 	}
 
-	public Date getDateOfBirth() {
+
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public int getWeight() {
+	public String getWeight() {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(String weight) {
 		this.weight = weight;
 	}
 

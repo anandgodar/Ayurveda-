@@ -60,6 +60,16 @@ public class DiseaseSymHerbPatientServiceImpl implements DiseaseSymHerbPatientSe
 	public List<DiseaseSymptom> getOverallDiseases() {
 		return dshpRepository.getOverallDiseases();
 	}
+
+	@Override
+	public List<Object[]> getOverallPatients() {
+		return dshpRepository.getOverallPatients();
+	}
+
+	@Override
+	public List<Object[]> getPatientByDisease(String diseaseName) {
+		return dshpRepository.getPatientByDisease(diseaseName);
+	}
 	
 	
 	

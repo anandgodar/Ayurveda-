@@ -11,8 +11,8 @@ public interface DiseaseSymHerbPatientService {
 	public List<DiseaseSymptom> getFrontReport();
 	public DiseaseSymptom getOverallStats();
 	public List<DiseaseSymptom> getOverallDiseases();
-	
-	
+	public List<Object[]> getOverallPatients();
+	public List<Object[]> getPatientByDisease(String diseaseName);
 	
 
 }
