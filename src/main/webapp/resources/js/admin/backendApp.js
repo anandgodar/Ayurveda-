@@ -84,7 +84,6 @@ backendApp.controller('reportController', [ '$scope', '$routeParams',
 		'reportService', function($scope, $routeParams, reportService) {
 
 			$scope.getPatientByDisease = function(diseaseName) {
-				alert(diseaseName);
 				reportService.getPatientByDisease(diseaseName).success(function(data) {
 					$scope.patientRecords = data;
 				});
