@@ -12,6 +12,13 @@ backendApp.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : 'subreport',
 		controller : 'reportController'
 	})
+	
+	.when('/everyDetailStats', {
+		templateUrl : 'everyDetailStats',
+		controller : 'reportController'
+	})
+	
+	
 
 	.when('/getPatientByDisease/:diseaseName', {
 		templateUrl : 'getPatientByDisease',

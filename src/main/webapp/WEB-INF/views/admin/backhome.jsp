@@ -1,180 +1,532 @@
- <div class="row" ng-controller="dashboardController">
 
-          <div class="col-md-4 col-sm-5">
+<div class="row" ng-controller="dashboardController">
 
-            <div class="portlet portlet-default">
+	<div class="col-md-4 col-sm-5">
 
-              <div class="portlet-header">
-                <h4 class="portlet-title">
-                  Quick Overview
-                </h4>
-              </div> <!-- /.portlet-header -->
+		<div class="portlet portlet-default">
 
-              <div class="portlet-body">                
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, fugiat, dolores, laborum sit.</p>
+			<div class="portlet-header">
+				<h4 class="portlet-title">Quick Overview</h4>
+			</div>
+			<!-- /.portlet-header -->
 
-                <hr>
-                
-                <table class="table keyvalue-table">
-                  <tbody>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-dollar kv-icon kv-icon-primary"></i> Total Patient</td>
-                      <td class="kv-value"><a href="#subreport/patient">{{statRecords.patientCount}}</a> </td>
-                    </tr>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-gift kv-icon kv-icon-secondary"></i> Total Disease</td>
-                      <td class="kv-value"><a href="#subreport/disease">{{statRecords.diseaseCount}}</a> </td>
-                    </tr>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-exchange kv-icon kv-icon-tertiary"></i>Total Symptoms</td>
-                      <td class="kv-value"><a href="#subreport/symptom">{{statRecords.symptomCount}}</a></td>
-                    </tr>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-envelope-o kv-icon kv-icon-default"></i> Herbals</td>
-                      <td class="kv-value"><a href="#subreport/herbal">{{statRecords.herbalCount}}</a> </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-              </div> <!-- /.portlet-body -->
-
-            </div> <!-- /.portlet -->
-            
-          </div> <!-- /.col -->
+			<div class="portlet-body">
 
 
-          <div class="col-md-8 col-sm-7">
-            <div class="portlet portlet-default">
+				<hr>
 
-              <div class="portlet-header">
-                <h4 class="portlet-title">
-                  Monthly Traffic
-                </h4>
-              </div> <!-- /.portlet-header -->
-                
-              <div class="portlet-body">
+				<table class="table keyvalue-table">
+					<tbody>
+						<tr>
+							<td class="kv-key"><i
+								class="fa fa-dollar kv-icon kv-icon-primary"></i> Total Patient</td>
+							<td class="kv-value"><a href="#subreport/patient">{{statRecords.patientCount}}</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="kv-key"><i
+								class="fa fa-gift kv-icon kv-icon-secondary"></i> Total Disease</td>
+							<td class="kv-value"><a href="#subreport/disease">{{statRecords.diseaseCount}}</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="kv-key"><i
+								class="fa fa-exchange kv-icon kv-icon-tertiary"></i>Total
+								Symptoms</td>
+							<td class="kv-value"><a href="#subreport/symptom">{{statRecords.symptomCount}}</a></td>
+						</tr>
+						<tr>
+							<td class="kv-key"><i
+								class="fa fa-envelope-o kv-icon kv-icon-default"></i> Herbals</td>
+							<td class="kv-value"><a href="#subreport/herbal">{{statRecords.herbalCount}}</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 
-                <div id="line-chart" class="chart-holder-300" style="padding: 0px; position: relative;"><canvas class="flot-base" width="735" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 735px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 105px; top: 285px; left: 142px; text-align: center;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 105px; top: 285px; left: 268px; text-align: center;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 105px; top: 285px; left: 398px; text-align: center;">Jul</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 105px; top: 285px; left: 523px; text-align: center;">Sep</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 105px; top: 285px; left: 649px; text-align: center;">Nov</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 273px; left: 19px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 227px; left: 6px; text-align: right;">500</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 182px; left: 0px; text-align: right;">1000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 137px; left: 0px; text-align: right;">1500</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 91px; left: 0px; text-align: right;">2000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 46px; left: 0px; text-align: right;">2500</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 0px; text-align: right;">3000</div></div></div><canvas class="flot-overlay" width="735" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 735px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 78px; height: 30px; top: 13px; right: 16px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:13px;right:16px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(215,75,75);overflow:hidden"></div></div></td><td class="legendLabel">Total visitors</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(71,95,119);overflow:hidden"></div></div></td><td class="legendLabel">Total Sales</td></tr></tbody></table></div></div>
-              </div> <!-- /.portlet-body -->          
+			</div>
+			<!-- /.portlet-body -->
 
-            </div> <!-- /.portlet -->
+		</div>
+		<!-- /.portlet -->
 
-          </div> <!-- /.col -->
+	</div>
+	<!-- /.col -->
 
-        </div> <!-- /.row -->
 
-        <br>
+	<div class="col-md-8 col-sm-7">
+		<div class="portlet portlet-default">
 
-        <div class="row">
+			<div class="portlet-header">
+				<h4 class="portlet-title">Monthly Traffic</h4>
+			</div>
+			<!-- /.portlet-header -->
 
-            <div class="col-md-5">
+			<div class="portlet-body">
 
-              <div class="portlet portlet-default">
+				<div class="graph-container">
+					<div class="caption">Disease VS Patient</div>
+					<div id="hero-bar" class="graph" style="position: relative;">
+						<svg height="220" version="1.1" width="508"
+							xmlns="http://www.w3.org/2000/svg"
+							style="overflow: hidden; position: relative; left: -0.5px;">
+							<desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Fever</desc>
+							<defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+							<text x="43.5" y="151.985167404" text-anchor="end"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text>
+							<path fill="none" stroke="#aaaaaa" d="M56,151.985167404H483"
+								stroke-width="0.5"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+							<text x="43.5" y="120.23887555300001" text-anchor="end"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal">
+							<tspan dy="4.004500553000014"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">500</tspan></text>
+							<path fill="none" stroke="#aaaaaa" d="M56,120.23887555300001H483"
+								stroke-width="0.5"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+							<text x="43.5" y="88.492583702" text-anchor="end"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal">
+							<tspan dy="4.008208702000005"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1,000</tspan></text>
+							<path fill="none" stroke="#aaaaaa" d="M56,88.492583702H483"
+								stroke-width="0.5"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+							<text x="43.5" y="56.746291850999995" text-anchor="end"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal">
+							<tspan dy="4.011916850999995"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1,500</tspan></text>
+							<path fill="none" stroke="#aaaaaa" d="M56,56.746291850999995H483"
+								stroke-width="0.5"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+							<text x="43.5" y="25" text-anchor="end"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal">
+							<tspan dy="4"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2,000</tspan></text>
+							<path fill="none" stroke="#aaaaaa" d="M56,25H483"
+								stroke-width="0.5"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+							<text x="447.4166666666667" y="164.485167404"
+								text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none"
+								fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal"
+								transform="matrix(0.8192,-0.5736,0.5736,0.8192,-33.5011,306.155)">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Stress</tspan></text>
+							<text x="376.25" y="164.485167404" text-anchor="middle"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal"
+								transform="matrix(0.8192,-0.5736,0.5736,0.8192,-49.6462,267.6358)">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Backpain</tspan></text>
+							<text x="305.08333333333337" y="164.485167404"
+								text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none"
+								fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal"
+								transform="matrix(0.8192,-0.5736,0.5736,0.8192,-59.2408,224.519)">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><a href="#everyDetailStats">Fever</a></tspan></text>
+							<text x="233.91666666666666" y="164.485167404"
+								text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none"
+								fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal"
+								transform="matrix(0.8192,-0.5736,0.5736,0.8192,-79.0749,188.5719)">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><a href="#everyDetailStats">Brain Hamarage</a></tspan></text>
+							<text x="162.75" y="164.485167404" text-anchor="middle"
+								font="10px &quot;Arial&quot;" stroke="none" fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal"
+								transform="matrix(0.8192,-0.5736,0.5736,0.8192,-88.6668,145.464)">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Stomachache</tspan></text>
+							<text x="91.58333333333334" y="164.485167404"
+								text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none"
+								fill="#888888"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif;"
+								font-size="12px" font-family="sans-serif" font-weight="normal"
+								transform="matrix(0.8192,-0.5736,0.5736,0.8192,-93.7561,99.1925)">
+							<tspan dy="4.000792404000009"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Mental Disorder</tspan></text>
+							<rect x="64.89583333333333" y="143.350176020528" width="53.375"
+								height="8.634991383471998" r="0" rx="0" ry="0" fill="#0b62a4"
+								stroke="#000" stroke-width="0"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+							<rect x="136.0625" y="143.286683436826" width="53.375"
+								height="8.698483967174013" r="0" rx="0" ry="0" fill="#0b62a4"
+								stroke="#000" stroke-width="0"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+							<rect x="207.22916666666669" y="134.52470688595" width="53.375"
+								height="17.460460518050013" r="0" rx="0" ry="0" fill="#0b62a4"
+								stroke="#000" stroke-width="0"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+							<rect x="278.3958333333333" y="127.85798559724" width="53.375"
+								height="24.127181806760007" r="0" rx="0" ry="0" fill="#0b62a4"
+								stroke="#000" stroke-width="0"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+							<rect x="349.5625" y="110.39752507919" width="53.375"
+								height="41.587642324810005" r="0" rx="0" ry="0" fill="#0b62a4"
+								stroke="#000" stroke-width="0"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+							<rect x="420.7291666666667" y="52.23831840815801" width="53.375"
+								height="99.746848995842" r="0" rx="0" ry="0" fill="#0b62a4"
+								stroke="#000" stroke-width="0"
+								style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect></svg>
+						<div class="morris-hover morris-default-style"
+							style="left: 38.5833px; top: 78px; display: none;">
+							<div class="morris-hover-row-label">...</div>
+							<div class="morris-hover-point" style="color: #0b62a4">
+								Stress</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.portlet-body -->
 
-                <div class="portlet-header">
-                  <h4 class="portlet-title">
-                    Product Breakdown
-                  </h4>
-                </div> <!-- /.portlet-header -->
-                
-                <div class="portlet-body">
+		</div>
+		<!-- /.portlet -->
 
-                  <div id="pie-chart" class="chart-holder-250" style="padding: 0px; position: relative;"><canvas class="flot-base" width="448" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 448px; height: 250px;"></canvas><canvas class="flot-overlay" width="448" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 448px; height: 250px;"></canvas><span class="pieLabel" id="pieLabel0" style="position: absolute; top: 20px; left: 268.5px;"><div style="font-size:x-small;text-align:center;padding:2px;color:rgb(215,75,75);">Product 1<br>21%</div></span><span class="pieLabel" id="pieLabel1" style="position: absolute; top: 175px; left: 290.5px;"><div style="font-size:x-small;text-align:center;padding:2px;color:rgb(71,95,119);">Product 2<br>28%</div></span><span class="pieLabel" id="pieLabel2" style="position: absolute; top: 143px; left: 92.5px;"><div style="font-size:x-small;text-align:center;padding:2px;color:rgb(188,188,188);">Product 3<br>42%</div></span><span class="pieLabel" id="pieLabel3" style="position: absolute; top: 0px; left: 168.5px;"><div style="font-size:x-small;text-align:center;padding:2px;color:rgb(119,119,119);">Product 4<br>9%</div></span></div>
-                </div> <!-- /.portlet-body -->
-                
-              </div> <!-- /.portlet -->
+	</div>
+	<!-- /.col -->
 
-            </div> <!-- /.col -->
+</div>
+<!-- /.row -->
 
-            <div class="col-md-3">
+<br>
 
-              <div class="portlet portlet-default">
+<div class="row">
 
-                <div class="portlet-header">
-                  <h4 class="portlet-title">
-                    Progress Stats
-                  </h4>
-                </div> <!-- /.portlet-header -->
+	
+	<div class="col-md-4">
 
-                <div class="portlet-body">
-                  
-                  <div class="progress-stat">
-                      
-                    <div class="progress-stat-label">
-                      % New Visits
-                    </div>
-                    
-                    <div class="progress-stat-value">
-                      77.7%
-                    </div>
-                    
-                    <div class="progress progress-striped progress-sm active">
-                      <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
-                        <span class="sr-only">77.74% Visit Rate</span>
-                      </div>
-                    </div> <!-- /.progress -->
-                    
-                  </div> <!-- /.progress-stat -->
+		<div class="portlet portlet-default">
 
-                  <div class="progress-stat">
-                      
-                    <div class="progress-stat-label">
-                      % Mobile Visitors
-                    </div>
-                    
-                    <div class="progress-stat-value">
-                      33.2%
-                    </div>
-                    
-                    <div class="progress progress-striped progress-sm active">
-                      <div class="progress-bar progress-bar-tertiary" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
-                        <span class="sr-only">33% Mobile Visitors</span>
-                      </div>
-                    </div> <!-- /.progress -->
-                    
-                  </div> <!-- /.progress-stat -->
+			<div class="portlet-header">
+				<h4 class="portlet-title">Disease Stats</h4>
+			</div>
+			<!-- /.portlet-header -->
 
-                  <div class="progress-stat">
-                      
-                    <div class="progress-stat-label">
-                      Bounce Rate
-                    </div>
-                    
-                    <div class="progress-stat-value">
-                      42.7%
-                    </div>
-                    
-                    <div class="progress progress-striped progress-sm active">
-                      <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width: 42%">
-                        <span class="sr-only">42.7% Bounce Rate</span>
-                      </div>
-                    </div> <!-- /.progress -->
-                    
-                  </div> <!-- /.progress-stat -->
+			<div class="portlet-body">
 
-                </div> <!-- /.portlet-body -->
+				<div class="progress-stat">
 
-              </div> <!-- /.portlet -->
+					<div class="progress-stat-label">% Fever</div>
 
-          </div> <!-- /.col -->
+					<div class="progress-stat-value">77.7%</div>
 
-          <div class="col-md-4">
-            <div class="portlet portlet-default">
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-primary" role="progressbar"
+							aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
+							style="width: 77%">
+							<span class="sr-only">77.74% Visit Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
 
-              <div class="portlet-header">
-                <h4 class="portlet-title">
-                  Server Load
-                </h4>
-              </div> <!-- /.portlet-header -->
+				</div>
+				
+				<div class="progress-stat">
 
-              <div class="portlet-body">
+					<div class="progress-stat-label">% cholesterol</div>
 
-                <div id="auto-chart" class="chart-holder-200" style="padding: 0px; position: relative;"><canvas class="flot-base" width="352" height="200" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 352px; height: 200px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 185px; left: 13px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 148px; left: 7px; text-align: right;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 111px; left: 7px; text-align: right;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 74px; left: 7px; text-align: right;">75</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 37px; left: 0px; text-align: right;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 0px; text-align: right;">125</div></div></div><canvas class="flot-overlay" width="352" height="200" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 352px; height: 200px;"></canvas></div>
-              </div> <!-- /.portlet-body -->
+					<div class="progress-stat-value">10.7%</div>
 
-            </div> <!-- /.portlet -->
-            
-          </div> <!-- /.col -->
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-primary" role="progressbar"
+							aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
+							style="width: 10%">
+							<span class="sr-only">10.74% Visit Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
 
-        </div> <!-- /.row -->
+				</div>
+				<!-- /.progress-stat -->
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">%Heart Disease</div>
+
+					<div class="progress-stat-value">42.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-secondary"
+							role="progressbar" aria-valuenow="42" aria-valuemin="0"
+							aria-valuemax="100" style="width: 42%">
+							<span class="sr-only">42.7% Bounce Rate</span>
+						</div>
+					</div>
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Headache</div>
+
+					<div class="progress-stat-value">33.2%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-tertiary" role="progressbar"
+							aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
+							style="width: 33%">
+							<span class="sr-only">33% Mobile Visitors</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				
+				<!-- /.progress-stat -->
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Hepatitis Disease</div>
+
+					<div class="progress-stat-value">12.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-secondary"
+							role="progressbar" aria-valuenow="12" aria-valuemin="0"
+							aria-valuemax="100" style="width: 12%">
+							<span class="sr-only">12.7% Bounce Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				<!-- /.progress-stat -->
+
+			</div>
+			<!-- /.portlet-body -->
+
+		</div>
+		<!-- /.portlet -->
+
+	</div>
+	<!-- /.col -->
+</div>
+	<div class="col-md-4">
+
+		<div class="portlet portlet-default">
+
+			<div class="portlet-header">
+				<h4 class="portlet-title">Herbal Stats</h4>
+			</div>
+			<!-- /.portlet-header -->
+
+			<div class="portlet-body">
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Fever</div>
+
+					<div class="progress-stat-value">77.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-primary" role="progressbar"
+							aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
+							style="width: 77%">
+							<span class="sr-only">77.74% Visit Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% cholesterol</div>
+
+					<div class="progress-stat-value">10.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-primary" role="progressbar"
+							aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
+							style="width: 10%">
+							<span class="sr-only">10.74% Visit Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				<!-- /.progress-stat -->
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">%Heart Disease</div>
+
+					<div class="progress-stat-value">42.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-secondary"
+							role="progressbar" aria-valuenow="42" aria-valuemin="0"
+							aria-valuemax="100" style="width: 42%">
+							<span class="sr-only">42.7% Bounce Rate</span>
+						</div>
+					</div>
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Headache</div>
+
+					<div class="progress-stat-value">33.2%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-tertiary" role="progressbar"
+							aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
+							style="width: 33%">
+							<span class="sr-only">33% Mobile Visitors</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				
+				<!-- /.progress-stat -->
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Hepatitis Disease</div>
+
+					<div class="progress-stat-value">12.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-secondary"
+							role="progressbar" aria-valuenow="12" aria-valuemin="0"
+							aria-valuemax="100" style="width: 12%">
+							<span class="sr-only">12.7% Bounce Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				<!-- /.progress-stat -->
+
+			</div>
+			<!-- /.portlet-body -->
+
+		</div>
+		<!-- /.portlet -->
+
+	</div>
+	</div>
+		<div class="col-md-4">
+
+		<div class="portlet portlet-default">
+
+			<div class="portlet-header">
+				<h4 class="portlet-title">Symptom Stats</h4>
+			</div>
+			<!-- /.portlet-header -->
+
+			<div class="portlet-body">
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Fever</div>
+
+					<div class="progress-stat-value">77.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-primary" role="progressbar"
+							aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
+							style="width: 77%">
+							<span class="sr-only">77.74% Visit Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% cholesterol</div>
+
+					<div class="progress-stat-value">10.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-primary" role="progressbar"
+							aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
+							style="width: 10%">
+							<span class="sr-only">10.74% Visit Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				<!-- /.progress-stat -->
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">%Heart Disease</div>
+
+					<div class="progress-stat-value">42.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-secondary"
+							role="progressbar" aria-valuenow="42" aria-valuemin="0"
+							aria-valuemax="100" style="width: 42%">
+							<span class="sr-only">42.7% Bounce Rate</span>
+						</div>
+					</div>
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Headache</div>
+
+					<div class="progress-stat-value">33.2%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-tertiary" role="progressbar"
+							aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
+							style="width: 33%">
+							<span class="sr-only">33% Mobile Visitors</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				
+				<!-- /.progress-stat -->
+
+				<div class="progress-stat">
+
+					<div class="progress-stat-label">% Hepatitis Disease</div>
+
+					<div class="progress-stat-value">12.7%</div>
+
+					<div class="progress progress-striped progress-sm active">
+						<div class="progress-bar progress-bar-secondary"
+							role="progressbar" aria-valuenow="12" aria-valuemin="0"
+							aria-valuemax="100" style="width: 12%">
+							<span class="sr-only">12.7% Bounce Rate</span>
+						</div>
+					</div>
+					<!-- /.progress -->
+
+				</div>
+				<!-- /.progress-stat -->
+
+			</div>
+			<!-- /.portlet-body -->
+
+		</div>
+		<!-- /.portlet -->
+
+	</div>
+	
+	
+	
+
+	</div>
+<!-- /.row -->

@@ -96,6 +96,12 @@ public class LoginController {
 		return "admin/subreport";
 	}
 	
+	@RequestMapping(value={"/everyDetailStats"}, method=RequestMethod.GET)
+	public String everyDetailStats() {
+		
+		return "admin/innerdetail";
+	}
+	
 	
 	
 	
