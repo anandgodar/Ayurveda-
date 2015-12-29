@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>2 column Google maps, foursquare (outer scroll)</title>
+<title>Ayurveda++ : Devfest</title>
 <meta name="generator" content="Bootply" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -38,29 +38,29 @@
 				<li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
 				<li><a href="#diseaseSymptoms"><i class="fa fa-comment"></i>
 						Disease</a></li>
-				<li><a href="#users"><i class="fa fa-user"></i> User</a></li>
+				<li><a href="#users"><i class="fa fa-user"></i> Signup</a></li>
 			</ul>
 			<form class="navbar-form" action="admin/verify" method="post">
 				<div class="form-group" style="display: inline;">
 					<div class="input-group">
 						<div class="input-group-btn">
-							<button type="button" class="btn btn-default dropdown-toggle"
+							<!-- <button type="button" class="btn btn-default dropdown-toggle"
 								data-toggle="dropdown">
 								<span class="glyphicon glyphicon-chevron-down"></span>
-							</button>
-							<ul class="dropdown-menu">
+							</button> -->
+							<!-- <ul class="dropdown-menu">
 								<li><a href="#">Category 1</a></li>
 								<li><a href="#">Category 2</a></li>
 								<li><a href="#">Category 3</a></li>
 								<li><a href="#">Category 4</a></li>
 								<li><a href="#">Category 5</a></li>
-							</ul>
+							</ul> -->
 						</div>
 						
 							<div class="form-group">
 								<label class="sr-only" for="exampleInputEmail3">Username</label> <input type="text" class="form-control"
 									id="" placeholder="Username" name="username">
-							</div>
+							</div>&nbsp;
 							<div class="form-group">
 								<label class="sr-only" for="exampleInputPassword3">Password</label>
 								<input type="password" class="form-control"
@@ -78,23 +78,27 @@
 	<div id="map-canvas">
 		<div class="col-md-8">
 
-			<div class="account-wall">
+			<div class="account-wall well">
 				<img class="profile-img"
-					src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-					alt="">
-				<form class="form-signin">
-					<input type="text" class="form-control" placeholder="Email"
-						required autofocus> <input type="password"
-						class="form-control" placeholder="Password" required>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">
-						Sign in</button>
-					<label class="checkbox pull-left"> <input type="checkbox"
-						value="remember-me"> Remember me
-					</label> <a href="#" class="pull-right need-help">Need help? </a><span
-						class="clearfix"></span>
-				</form>
+					src="<spring:url value="/resources/slider/img/ayurveda.jpg"/>"
+					alt="" height="225px" width="225px">
+					
+				
 			</div>
-			<a href="#" class="text-center new-account">Create an account </a>
+			<div class="account-wall well">
+				<img class="profile-img"
+					src="<spring:url value="/resources/slider/img/Ayurvedic-medicine-for-weight-gain.jpg"/>"
+					alt="" height="225px" width="225px">
+					
+				
+			</div>
+			<div class="account-wall well">
+				<img class="profile-img"
+					src="<spring:url value="/resources/slider/img/ayurveda.jpg"/>"
+					alt="" height="225px" width="225px">
+					
+				
+			</div>
 		</div>
 	</div>
 	<div class="container-fluid" id="main" ng-view></div>

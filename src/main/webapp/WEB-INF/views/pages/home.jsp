@@ -65,14 +65,7 @@
 
 		<hr>
 
-		<p>
-			<a href="http://bootply.com" target="_ext"
-				class="center-block btn btn-primary">More Bootstrap Snippets on
-				Bootply</a>
-		</p>
-
-		<hr>
-
+		
 	</div>
 	<div class="col-xs-4">
 		<!--map-canvas will be postioned here-->
