@@ -4,16 +4,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<!-- <bean id="dataSource"
+	 <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/essential" />
 		<property name="username" value="root" />
 		<property name="password" value="" />
-	</bean> -->
+	</bean> 
 
 	<!--Entity Manager Factory (id must be entityManagerFactory) -->
-<!-- 	<bean
+ 	<bean
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		id="entityManagerFactory">
 		<property name="packagesToScan" value="com.essential.project.dto" />
@@ -28,18 +28,18 @@
 		<property name="persistenceProvider">
 			<bean class="org.hibernate.jpa.HibernatePersistenceProvider" />
 		</property>
-	</bean> -->
+	</bean> 
 	
-	<bean id="dataSource"
+	<!-- <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
 		<property name="username" value="ayurveda" />
 		<property name="password" value="ayurveda" />
-	</bean>
+	</bean> -->
 
 	<!--Entity Manager Factory (id must be entityManagerFactory) -->
-	<bean
+	<!-- <bean
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		id="entityManagerFactory">
 		<property name="packagesToScan" value="com.essential.project.dto" />
@@ -54,7 +54,7 @@
 		<property name="persistenceProvider">
 			<bean class="org.hibernate.jpa.HibernatePersistenceProvider" />
 		</property>
-	</bean>
+	</bean> -->
 	
 
 	<!-- enable the configuration of transactional behavior based on annotations -->
