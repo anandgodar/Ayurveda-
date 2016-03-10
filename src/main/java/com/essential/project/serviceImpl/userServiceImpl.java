@@ -46,6 +46,11 @@ public class userServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public Login findByUserNameAndPassword(String username, String password) {
+		return userRepository.findByusernameAndPassword(username,password);
+	}
 	
 	
 	

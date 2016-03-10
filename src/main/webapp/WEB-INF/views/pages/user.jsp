@@ -1,6 +1,6 @@
 <div ng-controller="userController">
 	<div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
-	<div class="row well">
+	<div class="row well" style="width: 900px;">
 		<form>
 			<div class="row">
 				<div class="col-lg-6">
@@ -39,7 +39,7 @@
 
 	<div class="alert alert-info" style="width: 400px; margin-left: 100px;"
 		ng-show="userRecords.length == 0">No Userentry found</div>
-	<table class="table table-bordered table-striped"
+	<table class="table table-bordered table-striped" style="width: 900px;"
 		ng-show="userRecords.length > 0">
 		<thead>
 			<tr>
